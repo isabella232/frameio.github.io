@@ -8,14 +8,24 @@
     <title>Frame.io</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body,
         html {
             margin: 0;
             padding: 0;
         }
 
-        * {
-            box-sizing: border-box;
+        body {
+            min-height: 100vh;
+            /* mobile viewport bug fix */
+            min-height: -webkit-fill-available;
+        }
+
+        html {
+            height: -webkit-fill-available;
         }
 
         div {
